@@ -1,10 +1,11 @@
 import React, {Component } from 'react';
-import pic from "./assets/img/jodo.jpg";
+import gif from "./assets/img/backgroundFont.gif";
 import './App.css';
 import styled from 'styled-components';
 import logo from './logo.svg';
-import JodoSpeak from './JodoSpeak';
-import threeEntryPoint from "./threejs/threeEntryPoint"
+import ProjectPrint from './ProjectPrint';
+import threeEntryPoint from "./threejs/threeEntryPoint";
+import NavBar from "./NavBar";
 // import "./App.css"
 
 export default class Header extends Component {
@@ -16,26 +17,10 @@ export default class Header extends Component {
     render () {
         return (
           <div>
+            <div><NavBar/></div>
             <div className="header-header" ref={element => this.threeRootElement = element}></div>
-            <div><JodoSpeak/></div>
+            <div><ProjectPrint/></div>
             </div>
         );
     }
 }
-
-
-// export default Main;
-
-// <div className="App">
-// <header className="App-header">
-// <img src={pic} className="App-logo" alt="logo" />
-// className="App-link"
-// href="https://reactjs.org"
-// target="_blank"
-// rel="noopener noreferrer"
-// >
-// Learn React
-// </a>
-//
-// </header>
-// </div>

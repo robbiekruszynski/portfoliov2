@@ -1,7 +1,7 @@
 import React from 'react';
 import TestFile from './TestFile';
 import styled from 'styled-components';
-function JodoLove() {
+function Project() {
 
   const JodoFilm = styled.div`
     color: black;
@@ -23,40 +23,16 @@ function JodoLove() {
 
   const JodoMovies= [
     {
-    Title: "La cravate",
-    Year: "(1957)",
+    Title: "Jirn",
+    Description: "link",
     },
     {
-    Title: "Teatro sin fin",
-    Year: "(1965)",
+    Title: "89/98",
+    Description: "link",
     },
     {
-    Title: "Fando and Lis",
-    Year: "(1968)",
-    },
-    {
-    Title: "El Topo",
-    Year: "(1970)",
-    },
-    {
-    Title: "The Holy Mountain",
-    Year: "(1973)",
-    },
-    {
-    Title: "Santa Sangre",
-    Year: "(1989)",
-    },
-    {
-    Title: "The Rainbow Thief",
-    Year: "(1990)",
-    },
-    {
-    Title: "The Dance of Reality",
-    Year: "(2013)",
-    },
-    {
-    Title: "Endless Poetry",
-    Year: "(2016)",
+    Title: "LuckyRabbit",
+    Description: "link",
     }
   ];
 
@@ -65,7 +41,7 @@ function JodoLove() {
       {JodoMovies.map((item, index) =>
         <JodoBreak>
         <TestFile Title={item.Title}
-        Year={item.Year}
+        Description={item.Description}
         key={index}/>
         </JodoBreak>
       )}
@@ -73,4 +49,4 @@ function JodoLove() {
   );
 }
 
-export default JodoLove;
+export default Project;

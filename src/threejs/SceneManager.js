@@ -74,7 +74,7 @@ export default canvas => {
     }
 
     function updateCameraPositionRelativeToMouse() {
-        camera.position.x += (  (mousePosition.x * 0.01) - camera.position.x ) * 0.01;
+        camera.position.x += (  (mousePosition.x * 0.1) - camera.position.x ) * 0.1;
         camera.position.y += ( -(mousePosition.y * 0.01) - camera.position.y ) * 0.01;
         camera.lookAt(origin);
     }

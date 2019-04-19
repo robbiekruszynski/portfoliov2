@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
-import JodoLove from './JodoLove';
+import Project from './Project';
 import styled from 'styled-components';
 
 
-function JodoSpeak() {
+function ProjectPrint() {
   const Test = styled.p`
   color: red;
-
   `;
     return (
       <div>
-        <div><JodoLove/></div>
+        <div><Project/></div>
       </div>
     )
 
 }
 
 
-export default JodoSpeak;
+export default ProjectPrint;
