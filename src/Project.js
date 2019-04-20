@@ -7,7 +7,7 @@ function Project() {
     color: black;
     display: flex;
     flex-direction: row;
-      flex-wrap: wrap;
+    flex-wrap: wrap;
     border: 1px solid black;
     justify-content: space-around;
     `;
