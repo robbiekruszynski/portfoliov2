@@ -4,7 +4,7 @@ import alphaTexture from '../assets/img/stripes_gradient.jpg';
 export default scene => {
     const group = new THREE.Group();
 
-    const subjectGeometry = deformGeometry(new THREE.IcosahedronGeometry(10, 2));
+    const subjectGeometry = deformGeometry(new THREE.IcosahedronGeometry(10, 3));
 
     const subjectMaterial = new THREE.MeshStandardMaterial({ color: "#000", transparent: true, side: THREE.DoubleSide, alphaTest: 0 });
     subjectMaterial.alphaMap = new THREE.TextureLoader().load(alphaTexture);

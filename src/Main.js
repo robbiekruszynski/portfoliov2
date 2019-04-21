@@ -18,13 +18,10 @@ export default class Header extends Component {
     render () {
         return (
           <div>
-
             <div><NavBar/></div>
-
             <div className="header-header" ref={element => this.threeRootElement = element}></div>
             <div><ProjectPrint/></div>
-            <div><Rabbit/></div>
-            </div>
+          </div>
         );
     }
 }
