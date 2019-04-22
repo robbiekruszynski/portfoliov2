@@ -7,16 +7,16 @@ import * as serviceWorker from './serviceWorker';
 
 const render = (Component) => {
   ReactDOM.render(
-    <App>
       <HashRouter>
-        <Component/>
-      </HashRouter>
-    </App>,
-    document.getElementById('react-app-root')
+          <Component/>
+      </HashRouter>,
+    document.getElementById('root')
   );
 };
 
-ReactDOM.render(<App />, document.getElementById('root'));
+render(App);
+
+// ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

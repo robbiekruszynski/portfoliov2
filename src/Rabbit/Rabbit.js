@@ -5,9 +5,6 @@ import picTwo from '../assets/img/RabbitLogoTwo.png';
 
 
 function Rabbit() {
-  const Lucky = styled.h1`
-  color:red;
-  `;
 
   return(
 <div>

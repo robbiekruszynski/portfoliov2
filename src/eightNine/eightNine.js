@@ -2,15 +2,15 @@ import React, {Component } from 'react';
 import styled from 'styled-components';
 
 
-function Jirn() {
+function eightNine() {
 
   return(
 <div>
-<p>Test</p>
+<p>Hello</p>
 </div>
 
   )
 }
 
 
-export default Jirn;
+export default eightNine;

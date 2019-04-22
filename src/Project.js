@@ -1,6 +1,8 @@
 import React from 'react';
 import TestFile from './TestFile';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
 function Project() {
 
   const JodoFilm = styled.div`
@@ -23,16 +25,21 @@ function Project() {
 
   const JodoMovies= [
     {
+      Title:"Home",
+      Description:<Link to="/">Link</Link>,
+    },
+
+    {
     Title: "Jirn",
-    Description: "link",
+    Description: <Link to ="/Jirn">Link</Link>,
     },
     {
     Title: "89/98",
-    Description: "link",
+    Description: <Link to ="/eightNine">Link</Link>,
     },
     {
     Title: "LuckyRabbit",
-    Description: "link",
+    Description: <Link to="/rabbit">Link</Link>,
     }
   ];
 

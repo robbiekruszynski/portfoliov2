@@ -20,8 +20,9 @@ export default class Header extends Component {
           <div>
             <div><NavBar/></div>
             <div className="header-header" ref={element => this.threeRootElement = element}></div>
-            <div><ProjectPrint/></div>
           </div>
         );
     }
 }
+
+// <div><ProjectPrint/></div>
