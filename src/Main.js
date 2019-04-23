@@ -19,11 +19,13 @@ export default class Header extends Component {
 
     render () {
       const Big = styled.div`
+      margin-top:0px;
         height:100%;
       `;
 
       const Canvas = styled.div`
-      height: 1000px;
+      margin-top:0px;
+      height: 1100px;
       `;
         return (
           <Canvas>

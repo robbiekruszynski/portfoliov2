@@ -25,8 +25,8 @@ function Project() {
 
   const JodoMovies= [
     {
-      Title:"Home",
-      Description:<Link to="/">Link</Link>,
+    Title:"Home",
+    Description:<Link to="/">Link</Link>,
     },
 
     {
