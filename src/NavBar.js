@@ -14,7 +14,7 @@ function NavBar() {
   return (
     <div>
     <Name>
-    Robbie Kruszynski
+    Roberto Francisco Kruszynski
     </Name>
     </div>
   )

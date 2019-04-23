@@ -30,7 +30,7 @@ export default scene => {
 
     function deformGeometry(geometry) {
         for (let i=0; i<geometry.vertices.length; i+=1) {
-            const scalar = 1 + Math.random()*1;
+            const scalar = 5 + Math.random()*5;
             geometry.vertices[i].multiplyScalar(scalar)
         }
 
