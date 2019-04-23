@@ -4,11 +4,9 @@ import styled from 'styled-components';
 
 
 function ProjectPrint() {
-  const Test = styled.p`
-  color: red;
-  `;
+
   const Name = styled.h1`
-  color: magenta;
+  color: #525151;
   text-align: center;
   font-size: 80px;
   @media screen and (max-width:600px) {

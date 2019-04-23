@@ -2,7 +2,7 @@ import React from 'react';
 import TestFile from './TestFile';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import pic from './assets/img/dad.jpg';
+import pic from './assets/img/rk.jpg';
 import './styles.scss';
 
 class Project extends React.Component {
@@ -43,6 +43,7 @@ class Project extends React.Component {
       text-align: center;
       width:33%;
       `;
+
 
     const JodoMovies= [
       {
