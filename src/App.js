@@ -14,7 +14,6 @@ import Project from './Project';
 function App(){
     return (
       <div>
-        <Project/>
           <Switch>
             <Route exact path='/' component={Main} />
             <Route path='/Rabbit' component={Rabbit}/>

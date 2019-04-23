@@ -2,6 +2,8 @@ import React from 'react';
 import TestFile from './TestFile';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import pic from './assets/img/dad.jpg';
+import './styles.scss';
 
 function Project() {
 
@@ -44,7 +46,9 @@ function Project() {
   ];
 
   return(
-    <JodoFilm>
+    <div className="main">
+    <img src = { pic } className="img"/>
+    <JodoFilm className='bg-pink menu'>
       {JodoMovies.map((item, index) =>
         <JodoBreak>
         <TestFile Title={item.Title}
@@ -52,7 +56,8 @@ function Project() {
         key={index}/>
         </JodoBreak>
       )}
-    </JodoFilm>
+      </JodoFilm>
+      </div>
   );
 }
 

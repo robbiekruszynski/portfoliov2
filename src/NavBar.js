@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import gif from "./assets/img/backgroundFont.gif";
+import Project from './Project';
+
 
 
 
@@ -9,13 +11,14 @@ function NavBar() {
   color: black;
   text-align: center;
   font-size: 80px;
+  @media screen and (max-width:600px) {
+  font-size: 60px;
+  }
   `;
 
   return (
     <div>
-    <Name>
-    Roberto Francisco Kruszynski
-    </Name>
+    <Project/>
     </div>
   )
 }

@@ -7,9 +7,20 @@ function ProjectPrint() {
   const Test = styled.p`
   color: red;
   `;
+  const Name = styled.h1`
+  color: black;
+  text-align: center;
+  font-size: 80px;
+  @media screen and (max-width:600px) {
+  font-size: 60px;
+  }
+  `;
+
     return (
       <div>
-        <div><Project/></div>
+      <Name>
+      Roberto Francisco Kruszynski
+      </Name>
       </div>
     )
 
