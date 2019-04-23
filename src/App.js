@@ -9,11 +9,15 @@ import Rabbit from './Rabbit/Rabbit';
 import Jirn from './Jirn/Jirn';
 import eightNine from './eightNine/eightNine';
 import Project from './Project';
+import NavBar from "./NavBar";
+
 
 
 function App(){
     return (
       <div>
+      <ProjectPrint/>
+      <NavBar/>
           <Switch>
             <Route exact path='/' component={Main} />
             <Route path='/Rabbit' component={Rabbit}/>

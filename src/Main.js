@@ -27,8 +27,6 @@ export default class Header extends Component {
       `;
         return (
           <Canvas>
-          <div><ProjectPrint/></div>
-          <NavBar/>
             <Big className="header-header" ref={element => this.threeRootElement = element}></Big>
           </Canvas>
         );

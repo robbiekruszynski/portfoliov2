@@ -8,7 +8,7 @@ function ProjectPrint() {
   color: red;
   `;
   const Name = styled.h1`
-  color: black;
+  color: magenta;
   text-align: center;
   font-size: 80px;
   @media screen and (max-width:600px) {
