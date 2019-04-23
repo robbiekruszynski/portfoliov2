@@ -11,16 +11,25 @@ import Rabbit from './Rabbit/Rabbit';
 
 export default class Header extends Component {
 
+
+
     componentDidMount() {
         threeEntryPoint(this.threeRootElement);
     }
 
     render () {
+      const Big = styled.div`
+        height:100%;
+      `;
+
+      const Canvas = styled.div`
+      height: 1000px;
+      `;
         return (
-          <div>
+          <Canvas>
             <div><NavBar/></div>
-            <div className="header-header" ref={element => this.threeRootElement = element}></div>
-          </div>
+            <Big className="header-header" ref={element => this.threeRootElement = element}></Big>
+          </Canvas>
         );
     }
 }

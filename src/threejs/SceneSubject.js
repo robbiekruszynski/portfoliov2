@@ -29,8 +29,8 @@ export default scene => {
     const textureOffsetSpeed = 0.9;
 
     function deformGeometry(geometry) {
-        for (let i=0; i<geometry.vertices.length; i+=2) {
-            const scalar = 1 + Math.random()*0.8;
+        for (let i=0; i<geometry.vertices.length; i+=1) {
+            const scalar = 1 + Math.random()*1;
             geometry.vertices[i].multiplyScalar(scalar)
         }
 

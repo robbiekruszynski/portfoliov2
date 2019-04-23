@@ -31,7 +31,7 @@ export default canvas => {
 
     function buildRender({ width, height }) {
         const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
-        const DPR = window.devicePixelRatio ? window.devicePixelRatio : 1;
+        const DPR = window.devicePixelRatio ? window.devicePixelRatio : 2;
         renderer.setPixelRatio(DPR);
         renderer.setSize(width, height);
 
@@ -74,8 +74,8 @@ export default canvas => {
     }
 
     function updateCameraPositionRelativeToMouse() {
-        camera.position.x += (  (mousePosition.x * 0.01) - camera.position.x ) * 0.01;
-        camera.position.y += ( -(mousePosition.y * 0.01) - camera.position.y ) * 0.01;
+        camera.position.x += (  (mousePosition.x * 0.1) - camera.position.x ) * 0.1;
+        camera.position.y += ( -(mousePosition.y * 0.1) - camera.position.y ) * 0.1;
         camera.lookAt(origin);
     }
 
