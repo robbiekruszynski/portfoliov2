@@ -56,7 +56,7 @@ a {
     -ms-animation: color-change 10000ms infinite;
     animation: color-change 10000ms infinite;
 }
-
+/* 
 @-webkit-keyframes color-change {
     0% { color: #2196F3; }
     25% { color: #4CAF50; }
@@ -95,4 +95,4 @@ a {
     50% { color: #FFC107; }
     75% { color: #FF5722; }
     100% { color: #2196F3; }
-}
+} */

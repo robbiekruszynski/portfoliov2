@@ -3,7 +3,16 @@ import Project from './Project';
 import styled from 'styled-components';
 
 
-function ProjectPrint() {
+export class ProjectPrint extends React.Component {
+constructor(props){
+  super();
+  this.state = { name: "Roberto Francisco Kruszynski", link: null };
+  }
+
+render(){
+  setTimeout(() =>{
+    this.setState ({ name: "Roberto Francisco Kruszynski", link:<Link href = "https://github.com/Robbiekruszynski">GitHub</Link> });
+  } , 2000)
 
   const Name = styled.h1`
   color: #525151;
@@ -14,15 +23,25 @@ function ProjectPrint() {
   }
   `;
 
-    return (
-      <div>
-      <Name>
-      Roberto Francisco Kruszynski
-      </Name>
-      </div>
-    )
+  const Link = styled.a`
+  display:flex;
+  justify-content: center;
+  color: black;
 
+
+  `;
+
+  return (
+    <div>
+    <Name>
+    {this.state.name}
+    </Name>
+    {this.state.link}
+    </div>
+  )
+
+
+  }
 }
-
 
 export default ProjectPrint;
