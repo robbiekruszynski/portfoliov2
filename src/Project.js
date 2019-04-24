@@ -31,12 +31,12 @@ class Project extends React.Component {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      border: 1px solid black;
+      border: 1px solid white;
       justify-content: space-around;
       `;
 
       const JodoBreak = styled.div`
-      border:1px grey dotted;
+      border:1px white dotted;
       display: flex;
       flex-direction: center;
       justify-content: center;
@@ -55,13 +55,20 @@ class Project extends React.Component {
       Title: "Jirn",
       Description: <Link to ="/Jirn">Link</Link>,
       },
+
       {
       Title: "89/98",
       Description: <Link to ="/eightNine">Link</Link>,
       },
+
       {
       Title: "LuckyRabbit",
       Description: <Link to="/rabbit">Link</Link>,
+      },
+
+      {
+      Title: "Future Days",
+      Description: <Link to="/FutureDays">Link</Link>
       }
     ];
     return(

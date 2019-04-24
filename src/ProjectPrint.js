@@ -58,7 +58,7 @@ export class ProjectPrint extends React.Component {
         </Name>
         <Words>
         Design
-        / / 
+        / /
         Develop
         </Words>
         {this.state.link}
