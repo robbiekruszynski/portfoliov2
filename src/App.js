@@ -4,7 +4,7 @@ import './App.css';
 import TestFile from './TestFile';
 import Main from './Main';
 import ProjectPrint from './ProjectPrint';
-import gif from "./assets/img/backgroundFont.gif";
+
 import Rabbit from './Rabbit/Rabbit';
 import Jirn from './Jirn/Jirn';
 import eightNine from './eightNine/eightNine';

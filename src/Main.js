@@ -1,5 +1,5 @@
 import React, {Component } from 'react';
-import gif from "./assets/img/backgroundFont.gif";
+
 import './App.css';
 import styled from 'styled-components';
 import logo from './logo.svg';
