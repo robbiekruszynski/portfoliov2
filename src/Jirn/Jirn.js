@@ -7,27 +7,30 @@ import picFour from '../assets/img/Jirn4.png';
 
 function Jirn() {
 
-  const Img = styled.img`
-  display:flex;
-  flex-direction: row;
+  const Center = styled.div `
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  width: 500px;
-  height:500px;
+  align-items: center;
   `;
 
-  const ImgTwo = styled.img`
-  width: 700px;
-  height:300px;
+  const Img = styled.img`
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+
   `;
 
   return(
-<div>
+<Center>
+  <h3>Team project HTML5, CSS, API's, JavaScript, JQuery</h3>
 <Img src = { pic }/>
 <Img src = { picTwo }/>
-<ImgTwo src = { picThree }/>
-<ImgTwo src = { picFour }/>
-<p>Test</p>
-</div>
+<Img src = { picThree }/>
+<Img src = { picFour }/>
+  <h1><a href="https://ngwessels.github.io/JIRN/">Live deployment</a></h1>
+
+</Center>
 
   )
 }

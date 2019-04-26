@@ -16,14 +16,14 @@ function eightNine() {
   width: 80vw;
 
   `;
-  const IdiotBoi = styled.div `
+  const Center = styled.div `
   display: flex;
   flex-direction: column;
   align-items: center;
   `;
 
   return(
-<IdiotBoi>
+<Center>
   <Text>Concept to Creation</Text>
     <h3>Team brainstorm</h3>
     <Img src = { sketch }/>
@@ -31,8 +31,8 @@ function eightNine() {
     <Img src = { pic1 }/>
     <Img src = { pic2 }/>
     <Img src = { pic3 }/>
-    <h1> Live deployment <a href ="https://spawntrnr8998.firebaseapp.com/"/></h1>
-</IdiotBoi>
+    <h1><a href="https://spawntrnr8998.firebaseapp.com">Live deployment</a></h1>
+</Center>
 
   )
 }
