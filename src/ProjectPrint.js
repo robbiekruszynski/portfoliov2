@@ -12,7 +12,7 @@ export class ProjectPrint extends React.Component {
   render(){
   let timerId = setTimeout(() =>{
       this.setState ({link:<Link href = "https://github.com/Robbiekruszynski">GitHub</Link> });
-    } , 3000)
+    } , 1000)
     clearTimeout(timerId);
 
 
@@ -50,12 +50,20 @@ export class ProjectPrint extends React.Component {
          }
     `;
 
+    const Build = styled.h4`
+    display:flex;
+    justify-content: center;
+    `;
+
 
     return (
       <div>
         <Name>
         Robert Francisco Kruszynski
         </Name>
+        <Build>
+        This project is under construction
+        </Build>
         <Words>
         Design
         / /
