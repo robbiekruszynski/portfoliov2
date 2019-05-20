@@ -16,7 +16,6 @@ function Rabbit() {
   const Img = styled.img`
   display: flex;
   justify-content: center;
-  width: 80vw;
   margin-top: 20px;
 
   `;

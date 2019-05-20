@@ -11,14 +11,14 @@ import eightNine from './eightNine/eightNine';
 import FutureDays from './futureDays/futureDays';
 import Project from './Project';
 import NavBar from "./NavBar";
-
+import Threejs from './Main';
 
 
 function App(){
     return (
       <div>
-      <ProjectPrint/>
-      <NavBar/>
+        <ProjectPrint/>
+        <NavBar/>
           <Switch>
             <Route exact path='/' component={Main} />
             <Route path='/Rabbit' component={Rabbit}/>

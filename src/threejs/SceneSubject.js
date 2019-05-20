@@ -4,13 +4,13 @@ import alphaTexture from '../assets/img/stripes_gradient.jpg';
 export default scene => {
     const group = new THREE.Group();
 
-    const subjectGeometry = deformGeometry(new THREE.IcosahedronGeometry(10, 3));
+    const subjectGeometry = deformGeometry(new THREE.IcosahedronGeometry(10, 5));
 
-    const subjectMaterial = new THREE.MeshStandardMaterial({ color: "#000", transparent: true, side: THREE.DoubleSide, alphaTest: 0 });
+    const subjectMaterial = new THREE.MeshStandardMaterial({ color: "#000", transparent: true, side: THREE.DoubleSide, alphaTest: 0.5 });
     subjectMaterial.alphaMap = new THREE.TextureLoader().load(alphaTexture);
     subjectMaterial.alphaMap.magFilter = THREE.NearestFilter;
     subjectMaterial.alphaMap.wrapT = THREE.RepeatWrapping;
-    subjectMaterial.alphaMap.repeat.y = 4;
+    subjectMaterial.alphaMap.repeat.y = 1;
 
     const subjectMesh = new THREE.Mesh(subjectGeometry, subjectMaterial);
 
@@ -26,11 +26,11 @@ export default scene => {
     group.rotation.z = Math.PI/4;
 
     const speed = 0.1;
-    const textureOffsetSpeed = 0.9;
+    const textureOffsetSpeed = 0.03;
 
     function deformGeometry(geometry) {
-        for (let i=0; i<geometry.vertices.length; i+=1) {
-            const scalar = 5 + Math.random()*5;
+        for (let i=0; i<geometry.vertices.length; i+=2) {
+            const scalar = 1 + Math.random()*0.8;
             geometry.vertices[i].multiplyScalar(scalar)
         }
 
@@ -42,11 +42,11 @@ export default scene => {
 
         group.rotation.y = angle;
 
-        subjectMaterial.alphaMap.offset.y = 0.25 + time * textureOffsetSpeed;
+        subjectMaterial.alphaMap.offset.y = 0.55 + time * textureOffsetSpeed;
 
-        subjectWireframe.material.color.setHSL( Math.sin(angle*2), 0.5, 0.5 );
+        subjectWireframe.material.color.setHSL( Math.sin(angle*2), 0.5, 30 );
 
-        const scale = (Math.sin(angle*6)+6.4)/9;
+        const scale = (Math.sin(angle*8)+15)/15;
         subjectWireframe.scale.set(scale, scale, scale)
     }
 

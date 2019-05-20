@@ -31,7 +31,7 @@ export default canvas => {
 
     function buildRender({ width, height }) {
         const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
-        const DPR = window.devicePixelRatio ? window.devicePixelRatio : 2;
+        const DPR = window.devicePixelRatio ? window.devicePixelRatio : 1;
         renderer.setPixelRatio(DPR);
         renderer.setSize(width, height);
 
@@ -43,8 +43,8 @@ export default canvas => {
 
     function buildCamera({ width, height }) {
         const aspectRatio = width / height;
-        const fieldOfView = 80;
-        const nearPlane = 1;
+        const fieldOfView = 60;
+        const nearPlane = 6;
         const farPlane = 100;
         const camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
 
@@ -74,8 +74,8 @@ export default canvas => {
     }
 
     function updateCameraPositionRelativeToMouse() {
-        camera.position.x += (  (mousePosition.x * 0.1) - camera.position.x ) * 0.1;
-        camera.position.y += ( -(mousePosition.y * 0.1) - camera.position.y ) * 0.1;
+        camera.position.x += (  (mousePosition.x * 0.05) - camera.position.x ) * 0.1;
+        camera.position.y += ( -(mousePosition.y * 0.01) - camera.position.y ) * 0.1;
         camera.lookAt(origin);
     }
 

@@ -6,30 +6,27 @@ import ProjectPrint from './ProjectPrint';
 import threeEntryPoint from "./threejs/threeEntryPoint";
 import NavBar from "./NavBar";
 import Rabbit from './Rabbit/Rabbit';
-export default class Header extends Component {
 
 
+class Threejs extends Component {
 
     componentDidMount() {
-        threeEntryPoint(this.threeRootElement);
+    threeEntryPoint(this.threeRootElement);
     }
 
     render () {
-      const Big = styled.div`
-      margin-top:0px;
-        height:100%;
-      `;
 
-      const Canvas = styled.div`
-      margin-top:0px;
-      height: 1100px;
+      const Big = styled.div`
+      height: 100vh;
+      width: 100vw;
       `;
         return (
-          <Canvas>
+          <div>
             <Big className="header-header" ref={element => this.threeRootElement = element}></Big>
-          </Canvas>
+          </div>
         );
     }
 }
 
-// <div><ProjectPrint/></div>
+
+export default Threejs;
