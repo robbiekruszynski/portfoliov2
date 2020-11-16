@@ -1,56 +1,61 @@
-import * as THREE from 'three'
-import alphaTexture from '../assets/img/stripes_gradient.jpg';
+import * as THREE from "three";
+import alphaTexture from "../assets/img/stripes_gradient.jpg";
 
-export default scene => {
-    const group = new THREE.Group();
+export default (scene) => {
+  const group = new THREE.Group();
 
-    const subjectGeometry = deformGeometry(new THREE.IcosahedronGeometry(10, 5));
+  const subjectGeometry = deformGeometry(new THREE.IcosahedronGeometry(10, 5));
 
-    const subjectMaterial = new THREE.MeshStandardMaterial({ color: "#000", transparent: true, side: THREE.DoubleSide, alphaTest: 0.5 });
-    subjectMaterial.alphaMap = new THREE.TextureLoader().load(alphaTexture);
-    subjectMaterial.alphaMap.magFilter = THREE.NearestFilter;
-    subjectMaterial.alphaMap.wrapT = THREE.RepeatWrapping;
-    subjectMaterial.alphaMap.repeat.y = 1;
+  const subjectMaterial = new THREE.MeshStandardMaterial({
+    color: "#000",
+    transparent: true,
+    side: THREE.DoubleSide,
+    alphaTest: 0.5,
+  });
+  subjectMaterial.alphaMap = new THREE.TextureLoader().load(alphaTexture);
+  subjectMaterial.alphaMap.magFilter = THREE.NearestFilter;
+  subjectMaterial.alphaMap.wrapT = THREE.RepeatWrapping;
+  subjectMaterial.alphaMap.repeat.y = 1;
 
-    const subjectMesh = new THREE.Mesh(subjectGeometry, subjectMaterial);
+  const subjectMesh = new THREE.Mesh(subjectGeometry, subjectMaterial);
 
-    const subjectWireframe = new THREE.LineSegments(
-        new THREE.EdgesGeometry(subjectGeometry),
-        new THREE.LineBasicMaterial()
-    );
+  const subjectWireframe = new THREE.LineSegments(
+    new THREE.EdgesGeometry(subjectGeometry),
+    new THREE.LineBasicMaterial()
+  );
 
-    group.add(subjectMesh);
-    group.add(subjectWireframe);
-    scene.add(group);
+  group.add(subjectMesh);
+  group.add(subjectWireframe);
+  scene.add(group);
 
-    group.rotation.z = Math.PI/4;
+  group.rotation.z = Math.PI / 4;
 
-    const speed = 0.1;
-    const textureOffsetSpeed = 0.03;
+  const speed = 0.1;
+  const textureOffsetSpeed = 0.03;
 
-    function deformGeometry(geometry) {
-        for (let i=0; i<geometry.vertices.length; i+=2) {
-            const scalar = 1 + Math.random()*0.8;
-            geometry.vertices[i].multiplyScalar(scalar)
-        }
-
-        return geometry;
+  function deformGeometry(geometry) {
+    for (let i = 0; i < geometry.vertices.length; i += 2) {
+      const scalar = 1 + Math.random() * 0.8;
+      geometry.vertices[i].multiplyScalar(scalar);
     }
 
-    function update(time) {
-        const angle = time*speed;
+    return geometry;
+  }
 
-        group.rotation.y = angle;
+  function update(time) {
+    const angle = time * speed;
 
-        subjectMaterial.alphaMap.offset.y = 0.55 + time * textureOffsetSpeed;
+    group.rotation.y = angle;
 
-        subjectWireframe.material.color.setHSL( Math.sin(angle*2), 0.5, 30 );
+    subjectMaterial.alphaMap.offset.y = 0.55 + time * textureOffsetSpeed;
 
-        const scale = (Math.sin(angle*8)+15)/15;
-        subjectWireframe.scale.set(scale, scale, scale)
-    }
+    subjectWireframe.material.color.setHSL(Math.sin(angle * 2), 0.5, 30);
 
-    return {
-        update
-    }
-}
+    const scale = (Math.sin(angle * 8) + 15) / 15;
+    subjectWireframe.scale.set(scale, scale, scale);
+  }
+
+  return {
+    update,
+  };
+};

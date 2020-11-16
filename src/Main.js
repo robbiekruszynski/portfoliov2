@@ -1,11 +1,10 @@
 import React, {Component } from 'react';
 import './App.css';
 import styled from 'styled-components';
-import logo from './logo.svg';
+
 import ProjectPrint from './ProjectPrint';
 import threeEntryPoint from "./threejs/threeEntryPoint";
-import NavBar from "./NavBar";
-import Rabbit from './Rabbit/Rabbit';
+
 
 
 class Threejs extends Component {

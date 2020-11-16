@@ -1,34 +1,24 @@
-import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
-import './App.css';
-import TestFile from './TestFile';
-import Main from './Main';
-import ProjectPrint from './ProjectPrint';
+import React, { Component } from "react";
+import { Switch, Route } from "react-router-dom";
+import "./App.css";
+import TestFile from "./TestFile";
+import Main from "./Main";
+import ProjectPrint from "./ProjectPrint";
 
-import Rabbit from './Rabbit/Rabbit';
-import Jirn from './Jirn/Jirn';
-import eightNine from './eightNine/eightNine';
-import FutureDays from './futureDays/futureDays';
-import Project from './Project';
+import Project from "./Project";
 import NavBar from "./NavBar";
-import Threejs from './Main';
+import Threejs from "./Main";
 
-
-function App(){
-    return (
-      <div>
-        <ProjectPrint/>
-        <NavBar/>
-          <Switch>
-            <Route exact path='/' component={Main} />
-            <Route path='/Rabbit' component={Rabbit}/>
-            <Route path='/FutureDays' component={FutureDays}/>
-            <Route path='/Jirn' component={Jirn}/>
-            <Route path='/eightNine' component={eightNine}/>
-          </Switch>
-
-      </div>
-    )
+function App() {
+  return (
+    <div>
+      <ProjectPrint />
+      <NavBar />
+      <Switch>
+        <Route exact path="/" component={Main} />
+      </Switch>
+    </div>
+  );
 }
 
 export default App;

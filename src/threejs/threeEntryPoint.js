@@ -1,46 +1,49 @@
-import SceneManager from './SceneManager';
+import SceneManager from "./SceneManager";
 
-export default container => {
-    const canvas = createCanvas(document, container);
-    const sceneManager = new SceneManager(canvas);
+export default (container) => {
+  const canvas = createCanvas(document, container);
+  const sceneManager = new SceneManager(canvas);
 
-    let canvasHalfWidth;
-    let canvasHalfHeight;
+  let canvasHalfWidth;
+  let canvasHalfHeight;
 
-    bindEventListeners();
-    render();
+  bindEventListeners();
+  render();
 
-    function createCanvas(document, container) {
-        const canvas = document.createElement('canvas');
-        container.appendChild(canvas);
-        return canvas;
-    }
+  function createCanvas(document, container) {
+    const canvas = document.createElement("canvas");
+    container.appendChild(canvas);
+    return canvas;
+  }
 
-    function bindEventListeners() {
-        window.onresize = resizeCanvas;
-        window.onmousemove = mouseMove;
-        resizeCanvas();
-    }
+  function bindEventListeners() {
+    window.onresize = resizeCanvas;
+    window.onmousemove = mouseMove;
+    resizeCanvas();
+  }
 
-    function resizeCanvas() {
-        canvas.style.width = '100vw';
-        canvas.style.height= '100vh';
+  function resizeCanvas() {
+    canvas.style.width = "100vw";
+    canvas.style.height = "100vh";
 
-        canvas.width  = canvas.offsetWidth;
-        canvas.height = canvas.offsetHeight;
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
 
-        canvasHalfWidth = Math.round(canvas.offsetWidth/2);
-        canvasHalfHeight = Math.round(canvas.offsetHeight/2);
+    canvasHalfWidth = Math.round(canvas.offsetWidth / 1);
+    canvasHalfHeight = Math.round(canvas.offsetHeight / 1);
 
-        sceneManager.onWindowResize()
-    }
+    sceneManager.onWindowResize();
+  }
 
-    function mouseMove({screenX, screenY}) {
-        sceneManager.onMouseMove(screenX-canvasHalfWidth, screenY-canvasHalfHeight);
-    }
+  function mouseMove({ screenX, screenY }) {
+    sceneManager.onMouseMove(
+      screenX - canvasHalfWidth,
+      screenY - canvasHalfHeight
+    );
+  }
 
-    function render(time) {
-        requestAnimationFrame(render);
-        sceneManager.update();
-    }
-}
+  function render(time) {
+    requestAnimationFrame(render);
+    sceneManager.update();
+  }
+};
